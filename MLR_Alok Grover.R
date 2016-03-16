@@ -80,8 +80,8 @@ coeffs
 coefs<-coefficients(model2)
 coefs
 
-# Plotting graphs
-############# FOR_CLUMPY vs Average of Cl
+## Plotting graphs
+#Forest Clumpiness vs Average of Cl
 
 x <- with(Data, seq(min(FOR_CLUMPY), max(FOR_CLUMPY), length=30))
 with(Data, plot(FOR_CLUMPY, Average.of.Cl, las = 1, ylab = "Watershed Average Cl, mg/L",
@@ -89,7 +89,7 @@ with(Data, plot(FOR_CLUMPY, Average.of.Cl, las = 1, ylab = "Watershed Average Cl
 
 with(Data, curve(exp(coefs[1] + x*coefs[2]+ coefs[3]*mean(SLOPE_MEAN)), add=T, lty=2, col="blue"))
 
-############# SLOPE_RANGE vs Average of Cl
+# Average slope of the land vs Average of Cl
 
 x <- with(Data, seq(min(SLOPE_MEAN), max(SLOPE_MEAN), length=30))
 with(Data, plot(SLOPE_MEAN, Average.of.Cl, las = 1, ylab = "Watershed Average Cl, mg/L",
